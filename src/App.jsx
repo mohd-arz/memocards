@@ -4,7 +4,7 @@ import Cards from "./cards";
 import PreMain from "./pre";
 import { useRecoilValue } from "recoil";
 import { modeAtom } from "./store/atoms/cards";
-import "./styles/app.css";
+import "./styles/App.css";
 
 function App() {
   const mode = useRecoilValue(modeAtom);
