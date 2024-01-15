@@ -1,0 +1,152 @@
+/* Transition */
+/* Transition property - Transition duration - Transition timing-function - Transition delay */
+.cadrd{
+    border:solid 1px ; 
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    color: black;
+    transition: transform 2s;
+
+
+}
+.card-actdive{
+    /* transform: rotate3d(180deg) */
+    transform: rotateY(180deg);
+    /* z-index: -1; */
+}
+
+.containefr{
+    perspective: 900px;
+    border:solid 1px white;
+}
+
+.card-bacdk{
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    border:solid 1px ; 
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    color: black;
+    transition: transform 2s;
+    transform: rotateY(180deg);
+}
+.card-activde ~ .card-badck{
+    /* z-index: 1; */
+    transform: rotateY(360deg);
+}
+/* Animation */
+
+/* Animation duration , Animation name , Animation iteration count , Animation direction  */
+
+/*  */
+
+
+.card-container{
+    /* Setting perspective implicitly set position */
+    perspective: 900px;
+    /* border:solid 1px white; */
+} 
+.card{
+    width: 200px;
+    /* height: 400px; */
+    background-color: aliceblue;
+    color: black;
+
+    /*  */
+}
+.card-active{
+    animation-duration: 1s;
+    animation-name: card;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+.card-back-active{
+    animation-duration: 1s;
+    animation-name: card-back;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes card {
+    from{
+        z-index: 1;
+        transform: rotateY(0deg);
+    }
+    95%{
+        z-index: 0;
+    }
+    to{
+        z-index: -1;
+        transform: rotateY(180deg);
+    }
+}
+.card-back{
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    /* height: 400px; */
+    background-color: aliceblue;
+    color: black;
+    transform: rotateY(180deg);
+}
+@keyframes card-back {
+    from{
+        z-index: -1;
+        transform: rotateY(180deg);
+    }
+    95%{
+        z-index: 0;
+    }
+    to{
+        z-index: 1;
+        transform: rotateY(360deg);
+    }
+}
+
+.card{
+    transition: transform 300ms;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.status{
+    padding:  0 1rem ;
+    text-align: right;
+}
+.game-status-container{
+    position: absolute;
+    border: solid;
+    width: 200px;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0.1rem 0.1rem black;
+    font-size:1.2rem;
+
+    margin: 1rem;
+    color: rgb(138, 138, 138);
+    text-align: center;
+}
+.main-container{
+    margin:2rem;
+    display:grid;
+    gap:1rem;
+    /* Grip Column is dynamically added by JSX */
+    justify-items: center;
+    justify-content: center;
+}
+.status{
+    position: absolute;
+    top:0;
+    right: 0;
+}

@@ -1,0 +1,23 @@
+body{
+  margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;
+  height: 100vh;
+  color:white;
+  /* background-color: antiquewhite; */
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url('../assets/images/cards-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'card-font';
+}
+@font-face {
+  font-family: 'card-font';
+  src: url('../assets/fonts/PokerInOctoberDemo-Dxm3.otf');
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main{
+  flex-grow: 1;
+}
